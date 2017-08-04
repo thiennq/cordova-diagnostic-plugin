@@ -5,6 +5,20 @@
 * Added `getMotionAuthorizationStatus()` to check for motion authorization status (on devices that support Pedometer Event Tracking).
 * Updated documentation to clarify which iOS devices support motion tracking and Pedometer Event Tracking.
 
+**v3.6.5**
+Pin Android Compat and Support library deps to v25.+ to prevent unwanted v26 alpha/beta versions from being pulled in.
+
+**v3.6.4**
+Fix Android bug with legacy API signatures for Camera functions, where 3rd argument (`externalStorage`) is `false`.
+
+**v3.6.3**
+Fix iOS bug causing location state change handlers to erroneously trigger early. Fixes #185 for iOS.
+
+**v3.6.2**
+Fix bug in mapping of legacy camera API function signatures for iOS and Windows.
+
+**v3.6.1**
+Fix bug in mapping of legacy camera API function signatures for Android.
 **v3.6.0**
 * Undeprecate legacy camera API and support multiple call signatures for camera API methods for the benefit of ionic-native wrapper.
 

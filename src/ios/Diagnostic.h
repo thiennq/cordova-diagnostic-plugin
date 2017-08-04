@@ -29,12 +29,13 @@
 
 @interface Diagnostic : CDVPlugin <CBCentralManagerDelegate, CLLocationManagerDelegate>
 
-@property (nonatomic, retain) CBCentralManager* bluetoothManager;
-@property (strong, nonatomic) CLLocationManager* locationManager;
-@property (strong, nonatomic) CMMotionActivityManager* motionManager;
-@property (strong, nonatomic) NSOperationQueue* motionActivityQueue;
-@property (nonatomic, retain) NSString* locationRequestCallbackId;
-@property (nonatomic) EKEventStore *eventStore;
+    @property (nonatomic, retain) CBCentralManager* bluetoothManager;
+    @property (strong, nonatomic) CLLocationManager* locationManager;
+    @property (strong, nonatomic) CMMotionActivityManager* motionManager;
+    @property (strong, nonatomic) NSOperationQueue* motionActivityQueue;
+    @property (nonatomic, retain) NSString* locationRequestCallbackId;
+    @property (nonatomic) EKEventStore *eventStore;
+    @property (nonatomic, retain) NSString* currentLocationAuthorizationStatus;
 
 - (void) isLocationAvailable: (CDVInvokedUrlCommand*)command;
 - (void) isLocationEnabled: (CDVInvokedUrlCommand*)command;
@@ -76,7 +77,6 @@
 - (void) requestCalendarAuthorization: (CDVInvokedUrlCommand*)command;
 - (void) getRemindersAuthorizationStatus: (CDVInvokedUrlCommand*)command;
 - (void) isRemindersAuthorized: (CDVInvokedUrlCommand*)command;
-
 - (void) requestRemindersAuthorization: (CDVInvokedUrlCommand*)command;
 
 - (void) getBackgroundRefreshStatus: (CDVInvokedUrlCommand*)command;
