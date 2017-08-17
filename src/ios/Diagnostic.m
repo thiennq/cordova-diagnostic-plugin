@@ -1115,7 +1115,7 @@ ABAddressBookRef _addressBook;
             }
             
             NSLog(@"Motion access is %@", status);
-            completeBlock(@"status");
+            completeBlock(status);
             
         }];
     }else{
